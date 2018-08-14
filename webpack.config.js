@@ -76,7 +76,7 @@ module.exports = env => {
             globalObject: "global",
         },
         resolve: {
-            extensions: [".vue", ".js", ".scss", ".css"],
+            extensions: [".vue", ".js", ".ts", ".scss", ".css"],
             // Resolve {N} system modules from tns-core-modules
             modules: [
                 resolve(__dirname, "node_modules/tns-core-modules"),
@@ -172,6 +172,14 @@ module.exports = env => {
                         { loader: "css-loader", options: { minimize: false, url: false } },
                         "sass-loader",
                     ],
+                },
+                {
+                    test: /\.ts$/,
+                    exclude: /node_modules|vue\/src/,
+                    loader: "ts-loader",
+                    options: {
+                      appendTsSuffixTo: [/\.vue$/]
+                    }
                 },
                 {
                     test: /\.vue$/,

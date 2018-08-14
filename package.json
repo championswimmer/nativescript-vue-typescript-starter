@@ -6,7 +6,6 @@
   "license": "MIT",
   "nativescript": {
     "id": "in.championswimmer.nsvuets",
-    "bundle": "webpack",
     "tns-ios": {
       "version": "4.2.0"
     },
@@ -15,13 +14,14 @@
     }
   },
   "dependencies": {
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1",
     "nativescript-theme-core": "^1.0.4",
     "nativescript-vue": "^2.0.0-alpha.2",
-    "tns-core-modules": "^4.2.0"
+    "tns-core-modules": "^4.2.0",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@types/node": "^10.7.0",
     "babel-traverse": "6.26.0",
     "babel-types": "6.26.0",
     "babylon": "6.18.0",
@@ -35,7 +35,11 @@
     "nativescript-worker-loader": "~0.9.0",
     "node-sass": "^4.9.2",
     "sass-loader": "^7.1.0",
+    "ts-loader": "^4.4.2",
+    "tslib": "^1.9.3",
+    "typescript": "^3.0.1",
     "uglifyjs-webpack-plugin": "~1.2.7",
+    "vue": "^2.5.17",
     "vue-loader": "^15.2.6",
     "webpack": "^4.16.4",
     "webpack-bundle-analyzer": "~2.13.1",
