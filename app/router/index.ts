@@ -3,9 +3,9 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-import Home from '../components/Home';
-import HelloWorld from '../components/HelloWorld';
-import Counter from '../components/Counter';
+import Home from '../components/Home.vue';
+import HelloWorld from '../components/HelloWorld.vue';
+import Counter from '../components/Counter.vue';
 
 const router = new VueRouter({
   routes: [
