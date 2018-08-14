@@ -1,6 +1,35 @@
 # NS Vue Typescript Sample
 
-> A native application built with NativeScript-Vue
+> A native mobile application built with NativeScript-Vue in Typescript
+
+## Technologies
+
+### NativeScript
+A cross-platform Javascript platform that allows writing native (not hybrid) mobile apps
+for iOS and Android using Javascript.
+
+https://nativescript.org
+
+### Vue JS
+A modern Javascript frontend framework, strongly believing in single file components.
+
+https://vuejs.org
+
+#### Vue Router
+Default router (made by official maintainers of Vue JS)
+
+https://router.vuejs.org/
+
+#### Vuex
+Default state management framework for Vue (made by official maintainers of Vue JS)
+
+https://vuex.vuejs.org/
+
+### Typescript
+A language developed by Microsoft that is a superset of Javascript ES2017 standard.
+Adds the concept of strong types, interfaces to Javascript. Compiles down to Javascript.
+
+https://typescriptlang.org
 
 ## Usage
 
