@@ -38,23 +38,23 @@ module.exports = env => {
         // the nsconfig.json configuration file
         // when bundling with `tns run android|ios --bundle`.
         appPath = "app",
-            appResourcesPath = "app/App_Resources",
+        appResourcesPath = "app/App_Resources",
 
-            // You can provide the following flags when running 'tns run android|ios'
-            snapshot, // --env.snapshot
-            uglify, // --env.uglify
-            report, // --env.report
+        // You can provide the following flags when running 'tns run android|ios'
+        snapshot, // --env.snapshot
+        production, // --env.production
+        report, // --env.report
     } = env;
 
     const appFullPath = resolve(projectRoot, appPath);
     const appResourcesFullPath = resolve(projectRoot, appResourcesPath);
 
     const entryModule = nsWebpack.getEntryModule(appFullPath);
-    const entryPath = `.${sep}${entryModule}.js`;
+    const entryPath = `.${sep}${entryModule}.ts`;
     console.log(`Bundling application for entryPath ${entryPath}...`);
 
     const config = {
-        mode: uglify ? "production" : "development",
+        mode: production ? "production" : "development",
         context: appFullPath,
         watchOptions: {
             ignored: [
@@ -120,7 +120,7 @@ module.exports = env => {
                     },
                 },
             },
-            minimize: Boolean(uglify),
+            minimize: Boolean(production),
             minimizer: [
                 new UglifyJsPlugin({
                     uglifyOptions: {
@@ -200,6 +200,7 @@ module.exports = env => {
             // Define useful constants like TNS_WEBPACK
             new webpack.DefinePlugin({
                 "global.TNS_WEBPACK": "true",
+                "DEBUG_MODE": !production
             }),
             // Remove all files from the out dir.
             new CleanWebpackPlugin([`${dist}/**/*`]),

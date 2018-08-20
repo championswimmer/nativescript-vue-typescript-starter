@@ -1,13 +1,10 @@
 import Vue from 'nativescript-vue';
-
 import router from './router';
-
 import store from './store';
-
 import './styles.scss';
 
-// Uncomment the following to see NativeScript-Vue output logs
-//Vue.config.silent = false;
+// See NativeScript-Vue output logs in debug
+Vue.config.silent = !DEBUG_MODE
 
 new Vue({
 
