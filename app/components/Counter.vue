@@ -17,20 +17,23 @@
 </template>
 
 <script lang="ts">
-  import { mapActions } from 'vuex';
+  import {Vue, Component} from 'vue-property-decorator'
 
-  export default {
-    computed: {
-      message () {
-        return this.$store.state.counter.count.toString();
-      },
-      surprise () {
-        return (this.$store.state.counter.count >= 5);
-      },
-    },
-    methods: mapActions([
-      'decrement',
-      'increment',
-    ]),
+  @Component
+  export default class Counter extends Vue {
+    get message () {
+      return this.$store.state.counter.count.toString();
+    }
+    get surprise () {
+      return (this.$store.state.counter.count >= 5);
+    }
+
+    decrement () {
+      this.$store.dispatch('decrement')
+    }
+    increment () {
+      this.$store.dispatch('increment')
+    }
+
   };
 </script>

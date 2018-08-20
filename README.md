@@ -39,6 +39,8 @@ Here `<platform>` can be `android` or `ios`
 ``` bash
 # Install dependencies
 npm install
+# -- or -- 
+yarn 
 
 # Build, watch for changes and run the application
 tns run <platform> --bundle

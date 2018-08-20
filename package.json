@@ -17,6 +17,8 @@
     "nativescript-theme-core": "^1.0.4",
     "nativescript-vue": "^2.0.0-alpha.2",
     "tns-core-modules": "^4.2.0",
+    "tslib": "^1.9.3",
+    "vue-property-decorator": "^7.0.0",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
@@ -36,7 +38,6 @@
     "node-sass": "^4.9.2",
     "sass-loader": "^7.1.0",
     "ts-loader": "^4.4.2",
-    "tslib": "^1.9.3",
     "typescript": "^3.0.1",
     "uglifyjs-webpack-plugin": "~1.2.7",
     "vue": "^2.5.17",

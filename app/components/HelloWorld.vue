@@ -16,12 +16,11 @@
 </template>
 
 <script lang="ts">
-  export default {
-    data () {
-      return {
-        surprise: false,
-      };
-    },
+  import {Component, Vue} from 'vue-property-decorator'
+
+  @Component
+  export default class HelloWorld extends Vue {
+    surprise = false
   };
 </script>
 
